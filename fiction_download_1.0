@@ -27,7 +27,7 @@ content_text = BeautifulSoup(html_str, 'lxml')  #  Transforming it into a soup.
 content_text_str = content_text.find('div', id='chaptercontent', class_="Readarea ReadAjax_content")  #  Finding the element which contents text.
 content_title_str = content_text.find('h1', class_='wap_none')  #  Finding the title of this chapter.
 content = content_text_str.text.strip().split('  ')  #  Tiding the text.
-title = content_title_str.text
+title = content_title_str.text    #    Getting title.
 print(title)
 text = ''
 for i in content:
